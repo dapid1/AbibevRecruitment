@@ -27,7 +27,6 @@ namespace AbibevRecruitment
             {
                 CaptureDevice.Stop();
             }
-
             Application.Exit();
        
         }
@@ -93,10 +92,16 @@ namespace AbibevRecruitment
 
         private void stopBtn_Click(object sender, EventArgs e)
         {
-            if(CaptureDevice.IsRunning)
-            CaptureDevice.Stop();
+            while(CaptureDevice.IsRunning)
+                CaptureDevice.Stop();
+            
         }
 
-       
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            LoginPage login = new LoginPage();
+            login.ShowDialog();
+        }
     }
 }

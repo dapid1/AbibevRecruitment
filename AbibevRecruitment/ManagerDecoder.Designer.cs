@@ -36,6 +36,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.stopBtn = new System.Windows.Forms.Button();
             this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,18 +100,32 @@
             this.pictureBox.TabIndex = 7;
             this.pictureBox.TabStop = false;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(654, 624);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(211, 32);
+            this.linkLabel1.TabIndex = 8;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "⮌ go back to login";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // ManagerDecode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 679);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.stopBtn);
             this.Controls.Add(this.profileBox);
             this.Controls.Add(this.scanBtn);
             this.Controls.Add(this.cboDevice);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "ManagerDecode";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManagerDecode";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.ManagerDecode_Load);
@@ -129,6 +144,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button stopBtn;
         private System.Windows.Forms.PictureBox pictureBox;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 

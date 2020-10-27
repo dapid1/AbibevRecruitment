@@ -72,6 +72,7 @@
             this.Controls.Add(this.studentBtn);
             this.Controls.Add(this.managerBtn);
             this.Name = "LoginPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
 

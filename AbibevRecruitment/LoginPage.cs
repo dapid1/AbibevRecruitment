@@ -25,7 +25,9 @@ namespace AbibevRecruitment
 
         private void studentBtn_Click(object sender, EventArgs e)
         {
-
+            StudentForm form = new StudentForm();
+            this.Hide();
+            form.ShowDialog();
         }
     }
 }
