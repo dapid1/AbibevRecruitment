@@ -60,15 +60,24 @@ namespace AbibevRecruitment
             {
                 BarcodeReader barcodeReader = new BarcodeReader();
                 Bitmap bmp = (Bitmap)pictureBox.Image;
-                Result result = null;
-                result = barcodeReader.Decode(bmp);
+                Result result = barcodeReader.Decode(bmp);
                 if (result != null)
                 {
-                    profileBox.Text = result.ToString();
+                    String details = result.Text;
+                    profileBox.Text = "Leaner Profile: \n";
+                    profileBox.AppendText(details);
                     timer1.Stop();
-                    if (CaptureDevice.IsRunning)
-                        CaptureDevice.Stop();
-
+                    try
+                    {
+                        if (CaptureDevice.IsRunning)
+                        {
+                            CaptureDevice.Stop();
+                        }
+                    }
+                    catch (NullReferenceException ex)
+                    {
+                       
+                    }
                 }
             }
         }
