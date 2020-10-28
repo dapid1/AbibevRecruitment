@@ -72,6 +72,8 @@
             // 
             // nameBox
             // 
+            this.nameBox.AcceptsReturn = true;
+            this.nameBox.AcceptsTab = true;
             this.nameBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.nameBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.nameBox.Location = new System.Drawing.Point(261, 49);
@@ -94,6 +96,8 @@
             // 
             // surnameBox
             // 
+            this.surnameBox.AcceptsReturn = true;
+            this.surnameBox.AcceptsTab = true;
             this.surnameBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.surnameBox.Location = new System.Drawing.Point(261, 142);
             this.surnameBox.Name = "surnameBox";
@@ -105,6 +109,8 @@
             // 
             // cellNumberBox
             // 
+            this.cellNumberBox.AcceptsReturn = true;
+            this.cellNumberBox.AcceptsTab = true;
             this.cellNumberBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cellNumberBox.Location = new System.Drawing.Point(261, 371);
             this.cellNumberBox.Name = "cellNumberBox";
@@ -125,6 +131,8 @@
             // 
             // courseBox
             // 
+            this.courseBox.AcceptsReturn = true;
+            this.courseBox.AcceptsTab = true;
             this.courseBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.courseBox.Location = new System.Drawing.Point(261, 233);
             this.courseBox.Name = "courseBox";
@@ -145,6 +153,7 @@
             // 
             // homeAddressBox
             // 
+            this.homeAddressBox.AcceptsTab = true;
             this.homeAddressBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.homeAddressBox.Location = new System.Drawing.Point(261, 547);
             this.homeAddressBox.Multiline = true;
@@ -166,6 +175,8 @@
             // 
             // emailAddressBox
             // 
+            this.emailAddressBox.AcceptsReturn = true;
+            this.emailAddressBox.AcceptsTab = true;
             this.emailAddressBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.emailAddressBox.Location = new System.Drawing.Point(261, 454);
             this.emailAddressBox.Name = "emailAddressBox";
