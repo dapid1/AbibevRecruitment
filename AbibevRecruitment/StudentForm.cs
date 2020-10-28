@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
@@ -105,6 +106,11 @@ namespace AbibevRecruitment
             base.OnKeyPress(e);
         }
 
+        private void StudentForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -143,7 +149,24 @@ namespace AbibevRecruitment
             }
 
             //Combine details to form profile
+            
+            string qrString = String.Concat(name,surname,course,cellNumber,emailAddress,homeAddress);
+            string details = String.Concat("Name: ", nameBox.Text , "\n");
+            details = String.Concat(details, "Surname:  ", surnameBox.Text, "\n");
+            details = String.Concat(details, "Course:   ", courseBox.Text, "\n");
+            details = String.Concat(details, "Cell Number:  ", cellNumberBox.Text, "\n");
+            details = String.Concat(details, "Email Address:    ", emailAddressBox.Text, "\n");
+            details = String.Concat(details, "Home Address: ", homeAddressBox.Text, "\n");
+            
+            MessagingToolkit.QRCode.Codec.QRCodeEncoder encoder = new MessagingToolkit.QRCode.Codec.QRCodeEncoder();
+            encoder.QRCodeScale = 8;
+            Bitmap bmp = encoder.Encode(details);
 
+            this.Hide();
+            QRPage page = new QRPage();
+            page.qrPicture.Image = bmp;
+            page.detailBox.Text = details;
+            page.ShowDialog();
         }
 
         public string evalError(string error)

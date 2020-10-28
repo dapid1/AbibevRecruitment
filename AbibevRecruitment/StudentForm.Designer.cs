@@ -78,6 +78,7 @@
             this.nameBox.Name = "nameBox";
             this.nameBox.Size = new System.Drawing.Size(624, 39);
             this.nameBox.TabIndex = 3;
+            this.nameBox.Text = "Nomasam";
             this.nameBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.nameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nameBox_OnKeyDown);
             this.nameBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameBox_KeyPress);
@@ -93,19 +94,23 @@
             // 
             // surnameBox
             // 
+            this.surnameBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.surnameBox.Location = new System.Drawing.Point(261, 142);
             this.surnameBox.Name = "surnameBox";
             this.surnameBox.Size = new System.Drawing.Size(624, 39);
             this.surnameBox.TabIndex = 3;
+            this.surnameBox.Text = "Mbanjwa";
             this.surnameBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.surnameBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.surnameBox_KeyPress);
             // 
             // cellNumberBox
             // 
+            this.cellNumberBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cellNumberBox.Location = new System.Drawing.Point(261, 371);
             this.cellNumberBox.Name = "cellNumberBox";
             this.cellNumberBox.Size = new System.Drawing.Size(624, 39);
             this.cellNumberBox.TabIndex = 3;
+            this.cellNumberBox.Text = "083 123 4567";
             this.cellNumberBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.cellNumberBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cellNumberBox_KeyPress);
             // 
@@ -120,10 +125,12 @@
             // 
             // courseBox
             // 
+            this.courseBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.courseBox.Location = new System.Drawing.Point(261, 233);
             this.courseBox.Name = "courseBox";
             this.courseBox.Size = new System.Drawing.Size(624, 39);
             this.courseBox.TabIndex = 3;
+            this.courseBox.Text = "CNET";
             this.courseBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.courseBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.courseBox_KeyPress);
             // 
@@ -138,11 +145,13 @@
             // 
             // homeAddressBox
             // 
+            this.homeAddressBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.homeAddressBox.Location = new System.Drawing.Point(261, 547);
             this.homeAddressBox.Multiline = true;
             this.homeAddressBox.Name = "homeAddressBox";
-            this.homeAddressBox.Size = new System.Drawing.Size(624, 122);
+            this.homeAddressBox.Size = new System.Drawing.Size(624, 150);
             this.homeAddressBox.TabIndex = 3;
+            this.homeAddressBox.Text = "123 Street Kas\r\nBoksburg\r\nJohannesburg\r\n1401";
             this.homeAddressBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.homeAddressBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.homeAddressBox_KeyPress);
             // 
@@ -157,10 +166,12 @@
             // 
             // emailAddressBox
             // 
+            this.emailAddressBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.emailAddressBox.Location = new System.Drawing.Point(261, 454);
             this.emailAddressBox.Name = "emailAddressBox";
             this.emailAddressBox.Size = new System.Drawing.Size(624, 39);
             this.emailAddressBox.TabIndex = 3;
+            this.emailAddressBox.Text = "nom@me.com";
             this.emailAddressBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.emailAddressBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.emailAddressBox_KeyPress);
             // 
@@ -194,7 +205,7 @@
             // 
             // submitBtn
             // 
-            this.submitBtn.Location = new System.Drawing.Point(729, 923);
+            this.submitBtn.Location = new System.Drawing.Point(733, 924);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(150, 46);
             this.submitBtn.TabIndex = 7;
@@ -239,6 +250,7 @@
             this.Name = "StudentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StudentForm_FormClosing);
             this.Load += new System.EventHandler(this.StudentForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
