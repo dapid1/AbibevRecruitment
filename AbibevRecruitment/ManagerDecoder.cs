@@ -13,8 +13,10 @@ using ZXing;
 
 namespace AbibevRecruitment
 {
+
     public partial class ManagerDecode : Form
     {
+        Image File;
         public ManagerDecode()
         {
             InitializeComponent();
@@ -102,6 +104,19 @@ namespace AbibevRecruitment
             this.Hide();
             LoginPage login = new LoginPage();
             login.ShowDialog();
+        }
+
+        private void uploadQRBtn_Click(object sender, EventArgs e)
+        {
+
+            OpenFileDialog f = new OpenFileDialog();
+            f.Filter = "JPG(*.JPG)|*.jpg";
+
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                File = Image.FromFile(f.FileName);
+                pictureBox.Image = File;
+            }
         }
     }
 }

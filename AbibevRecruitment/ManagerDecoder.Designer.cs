@@ -37,6 +37,8 @@
             this.stopBtn = new System.Windows.Forms.Button();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.uploadQRBtn = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +72,7 @@
             // 
             // profileBox
             // 
-            this.profileBox.Location = new System.Drawing.Point(483, 167);
+            this.profileBox.Location = new System.Drawing.Point(507, 187);
             this.profileBox.Multiline = true;
             this.profileBox.Name = "profileBox";
             this.profileBox.Size = new System.Drawing.Size(251, 280);
@@ -111,11 +113,26 @@
             this.linkLabel1.Text = "⮌ go back to login";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // uploadQRBtn
+            // 
+            this.uploadQRBtn.Location = new System.Drawing.Point(523, 127);
+            this.uploadQRBtn.Name = "uploadQRBtn";
+            this.uploadQRBtn.Size = new System.Drawing.Size(150, 46);
+            this.uploadQRBtn.TabIndex = 9;
+            this.uploadQRBtn.Text = "&Upload QR";
+            this.uploadQRBtn.UseVisualStyleBackColor = true;
+            this.uploadQRBtn.Click += new System.EventHandler(this.uploadQRBtn_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // ManagerDecode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 679);
+            this.Controls.Add(this.uploadQRBtn);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.stopBtn);
@@ -145,6 +162,8 @@
         private System.Windows.Forms.Button stopBtn;
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button uploadQRBtn;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
